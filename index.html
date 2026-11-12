@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Talasu Sanjay — Electronics &amp; Communication Engineer</title>
+<meta name="description" content="Portfolio of Talasu Sanjay: VLSI, embedded systems, analog design, IoT and TinyML." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Poppins:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#05070d;--bg2:#0d1220;--panel:#0f1526;--border:#1e2740;
+  --hi:#eef1fb;--mid:#a7b0c8;--lo:#6b7590;
+  --cyan:#4fd6ff;--blue:#5b7fff;--violet:#9b6bff;
+  --grad:linear-gradient(120deg,#4fd6ff,#5b7fff 55%,#9b6bff);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark}}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){--bg:#f6f7fb;--bg2:#eef1f8;--panel:#ffffff;--border:#dfe3ee;--hi:#10121c;--mid:#454c62;--lo:#7c8296;--cyan:#0a7fa8;color-scheme:light}
+}
+:root[data-theme="dark"]{--bg:#05070d;--bg2:#0d1220;--panel:#0f1526;--border:#1e2740;--hi:#eef1fb;--mid:#a7b0c8;--lo:#6b7590;--cyan:#4fd6ff;color-scheme:dark}
+:root[data-theme="light"]{--bg:#f6f7fb;--bg2:#eef1f8;--panel:#ffffff;--border:#dfe3ee;--hi:#10121c;--mid:#454c62;--lo:#7c8296;--cyan:#0a7fa8;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:radial-gradient(1100px 560px at 10% -10%,#5b7fff22,transparent 60%),radial-gradient(900px 600px at 110% 5%,#9b6bff1f,transparent 55%),var(--bg);color:var(--hi);font-family:'Poppins',system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:'Space Grotesk',system-ui,sans-serif;margin:0;line-height:1.15}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mono{font-family:'JetBrains Mono',monospace}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav .links{display:flex;gap:26px;font-size:.88rem;color:var(--mid)}
+nav .links a:hover{color:var(--hi)}
+.logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem}
+.btn{display:inline-block;padding:11px 22px;border-radius:99px;font-weight:500;font-size:.92rem;border:1px solid var(--border);color:var(--hi);background:transparent;cursor:pointer;font-family:inherit;transition:transform .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--cyan)}
+.btn.pri{background:var(--grad);color:#04060c;border:0;font-weight:600}
+#theme{width:38px;height:38px;padding:0;border-radius:50%}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:60}
+#home{min-height:100vh;display:flex;align-items:center;padding:110px 0 70px;position:relative}
+#home::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:46px 46px;opacity:.3;mask-image:radial-gradient(circle at 50% 35%,#000,transparent 70%);-webkit-mask-image:radial-gradient(circle at 50% 35%,#000,transparent 70%);pointer-events:none}
+#home .wrap{position:relative}
+.eyebrow{color:var(--cyan);font-size:.78rem;margin-bottom:18px}
+h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:700}
+.lead{color:var(--mid);font-size:1.1rem;max-width:560px;margin:18px 0 8px}
+.typed{height:30px;color:var(--cyan);font-size:1.05rem}
+.cur{display:inline-block;width:2px;height:1.1em;background:var(--cyan);vertical-align:-3px;margin-left:3px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:54px;max-width:720px}
+.stat{border-left:2px solid var(--blue);padding-left:14px}
+.stat b{font-family:'Space Grotesk',sans-serif;font-size:1.7rem;display:block}
+.stat span{color:var(--mid);font-size:.82rem}
+section.s{padding:84px 0}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:34px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:26px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card h3{font-size:1.2rem;margin-bottom:6px}
+.card p,.card li{color:var(--mid);font-size:.94rem}
+.card ul{padding-left:18px;margin:10px 0 0}
+.tag{display:inline-block;border:1px solid var(--border);background:var(--bg2);color:var(--mid);border-radius:99px;padding:3px 11px;font-size:.74rem;margin:4px 6px 0 0}
+.feat{border-color:#5b7fff66;background:linear-gradient(160deg,color-mix(in srgb,var(--blue) 10%,var(--panel)),var(--panel))}
+.feat .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:18px 0}
+.kpis div{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px}
+.kpis b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.35rem}
+.kpis span{font-size:.76rem;color:var(--mid)}
+.tl{border-left:2px solid var(--border);margin-left:6px;padding-left:26px}
+.tl .it{position:relative;margin-bottom:30px}
+.tl .it::before{content:'';position:absolute;left:-33px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--cyan)}
+.when{color:var(--cyan);font-size:.78rem}
+.skill{margin-bottom:16px}
+.skill div{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:6px}
+.sb{height:6px;border-radius:99px;background:var(--bg2);border:1px solid var(--border);overflow:hidden}
+.sb i{display:block;height:100%;width:0;background:var(--grad);border-radius:99px;transition:width 1.1s cubic-bezier(.16,1,.3,1)}
+.contact{text-align:center}
+.contact p{color:var(--mid);max-width:520px;margin:0 auto 26px}
+footer{text-align:center;color:var(--lo);font-size:.82rem;padding:30px 0 40px;border-top:1px solid var(--border)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+@media (max-width:720px){nav .links{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav><div class="wrap">
+  <a href="#home" class="logo">TS<span class="grad">.</span></a>
+  <div class="links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+  <div style="display:flex;gap:10px;align-items:center"><button id="theme" class="btn" aria-label="Switch between dark and light theme">◐</button><a href="#contact" class="btn pri">Hire me</a></div>
+</div></nav>
+
+<section id="home"><div class="wrap">
+  <p class="eyebrow mono">// ELECTRONICS &amp; COMMUNICATION ENGINEER</p>
+  <h1>Hi, I’m<br /><span class="grad">Talasu Sanjay</span></h1>
+  <p class="lead">B.Tech ECE student at VIT Vellore, building at the intersection of silicon and software.</p>
+  <div class="typed mono"><span id="typed"></span><span class="cur"></span></div>
+  <div class="cta">
+    <a class="btn pri" href="#projects">View projects</a>
+    <a class="btn" href="https://www.linkedin.com/in/sanjaytalasu/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="mailto:sanjaytalasu06@gmail.com">Email me</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>8.89</b><span>CGPA, VIT Vellore</span></div>
+    <div class="stat"><b>11</b><span>posit multipliers verified</span></div>
+    <div class="stat"><b>−31.3%</b><span>power-delay product</span></div>
+    <div class="stat"><b>ISRO</b><span>SHAR summer intern</span></div>
+  </div>
+</div></section>
+
+<section id="about" class="s"><div class="wrap">
+  <h2>About me</h2>
+  <div class="card"><p style="font-size:1.02rem">I’m an Electronics and Communication Engineering student at VIT Vellore (B.Tech, 2027) who enjoys work that joins hardware and software. My experience covers microcontroller-based systems, IoT, sensor interfacing, digital electronics, signal conditioning and ASIC/FPGA design. I work in C++, Python, MATLAB and Verilog HDL, with hands-on exposure to Arduino, ESP32 and PLC/SCADA. I’m looking to build a career in embedded systems and electronics, creating reliable solutions from strong fundamentals.</p></div>
+</div></section>
+
+<section id="experience" class="s"><div class="wrap">
+  <h2>Experience &amp; certification</h2>
+  <div class="tl">
+    <div class="it"><span class="when mono">17 Jun 2026 – 16 Jul 2026 · Sriharikota</span>
+      <h3>Summer Intern, ISRO-SHAR SMPC</h3>
+      <ul style="color:var(--mid);font-size:.94rem;padding-left:18px">
+        <li>Designed and simulated 4th-order active low-pass Butterworth and Chebyshev filters in LTspice for LINAC instrumentation and signal conditioning.</li>
+        <li>Ran Monte Carlo tolerance analysis to measure component variation and improve cutoff-frequency stability, and analysed frequency and transient responses for precision measurement channels.</li>
+        <li>Gained hands-on exposure to PLC and SCADA industrial automation: process I/O monitoring, real-time data acquisition and fault detection.</li>
+      </ul></div>
+    <div class="it"><span class="when mono">Certification</span>
+      <h3>Maven Silicon, Physical Design</h3>
+      <p style="color:var(--mid);font-size:.94rem;margin:6px 0 0">Worked through the ASIC physical design flow from netlist to GDSII: floorplanning, power planning, placement, clock tree synthesis, routing and physical verification concepts.</p></div>
+    <div class="it"><span class="when mono">Expected 2027 · Vellore</span>
+      <h3>B.Tech, Electronics &amp; Communication Engineering</h3>
+      <p style="color:var(--mid);font-size:.94rem;margin:6px 0 0">VIT Vellore, CGPA 8.89. Earlier: Intermediate (MPC), Narayana Junior College, 87.2% (2023); 10th, Narayana High School, 87.2% (2021).</p></div>
+  </div>
+</div></section>
+
+<section id="projects" class="s"><div class="wrap">
+  <h2>Projects</h2>
+  <div class="card feat" style="margin-bottom:20px">
+    <span class="when mono">VIT SENSE Project 1 · 2026–27 · Guide: Dr. Sri Adibhatla Sridevi</span>
+    <h3 style="font-size:1.5rem;margin-top:6px">Precision-configurable 32-bit posit multipliers for neural networks</h3>
+    <p>Hardware acceleration strategies for ANN inference. Built on the ADEPNET base paper (IEEE Access 2024), I designed, verified and synthesised eleven 32-bit posit multipliers: nine exact configurations and two unbiased approximate designs, PM-2 BCT-P32 and PM-3 RAC-P32. Team of three with Vignan B and Shaik Shavez.</p>
+    <div class="kpis">
+      <div><b>−31.3%</b><span>PDP for PM-3 (32.40 pJ)</span></div>
+      <div><b>−33.0%</b><span>area for PM-2 (15,485 µm²)</span></div>
+      <div><b>−46.4%</b><span>FPGA LUTs for PM-2</span></div>
+      <div><b>0%</b><span>MLP accuracy loss (PM-2)</span></div>
+    </div>
+    <ul>
+      <li>Radix-8 Booth multiplier with a log-depth leading-zero-count and barrel-shifter codec, plus zero-cost bias compensation (4.6–6.6× lower MRED).</li>
+      <li>Verilog-2001 RTL checked against an exact Python reference model with 0 mismatches across all 11 designs; synthesised in Cadence Genus (90 nm, 5.0 ns).</li>
+      <li>Validated on a Digilent Arty A7-100T FPGA with Vivado: 48/48 on-board tests passed. IEEE manuscript in preparation.</li>
+    </ul>
+    <div style="margin-top:12px"><span class="tag">Verilog HDL</span><span class="tag">Cadence Genus</span><span class="tag">Vivado</span><span class="tag">FPGA</span><span class="tag">Posit arithmetic</span><span class="tag">ASIC</span></div>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Non-invasive glucose monitoring with TinyML</h3>
+      <p>A low-cost ESP32-based PPG sensing system using MAX30102 and MLX90614 sensors, with a 12-dimensional feature vector. I compared Ridge Regression, SVR and Random Forest: Random Forest reached an MAE of 12.1 mg/dL and R² of 0.78, and temperature fusion cut MAE by 36%.</p>
+      <div><span class="tag">ESP32</span><span class="tag">TinyML</span><span class="tag">Python</span></div></div>
+    <div class="card"><h3>IoT smart rover robotic car</h3>
+      <p>An Arduino UNO rover with obstacle avoidance, Bluetooth manual control and voice commands. Priority-based closed-loop control uses HC-SR04 ultrasonic sensors, and Bluetooth commands override autonomous navigation. Documented in IEEE paper format.</p>
+      <div><span class="tag">Arduino</span><span class="tag">Bluetooth</span><span class="tag">C++</span></div></div>
+    <div class="card"><h3>Smart street light</h3>
+      <p>An automatic street-lighting system: an LDR detects ambient light and IR sensors detect motion. A microcontroller switches lights on only in low light when motion is present, which cuts unnecessary operation.</p>
+      <div><span class="tag">LDR</span><span class="tag">IR sensor</span><span class="tag">Microcontroller</span></div></div>
+  </div>
+</div></section>
+
+<section id="skills" class="s"><div class="wrap">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card" id="bars">
+      <div class="skill"><div><span>Verilog HDL &amp; digital design</span></div><div class="sb"><i data-w="82"></i></div></div>
+      <div class="skill"><div><span>Embedded systems (Arduino, ESP32)</span></div><div class="sb"><i data-w="85"></i></div></div>
+      <div class="skill"><div><span>Analog circuits &amp; LTspice</span></div><div class="sb"><i data-w="80"></i></div></div>
+      <div class="skill"><div><span>C++, Python, MATLAB</span></div><div class="sb"><i data-w="78"></i></div></div>
+      <div class="skill" style="margin-bottom:0"><div><span>PLC &amp; SCADA</span></div><div class="sb"><i data-w="65"></i></div></div>
+    </div>
+    <div class="card">
+      <h3>Tools</h3><div><span class="tag">LTspice</span><span class="tag">Cadence Virtuoso</span><span class="tag">Cadence Genus</span><span class="tag">Vivado</span><span class="tag">Multisim</span></div>
+      <h3 style="margin-top:18px">Core domains</h3><div><span class="tag">Embedded systems</span><span class="tag">Digital electronics</span><span class="tag">Analog electronics</span><span class="tag">Signals &amp; systems</span><span class="tag">Microprocessors</span></div>
+      <h3 style="margin-top:18px">Languages</h3><p style="margin:4px 0 0">English (fluent), Telugu (fluent), Hindi (professional)</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="contact" class="s"><div class="wrap contact">
+  <h2>Let’s work together</h2>
+  <p>I’m open to internships and entry-level roles in embedded systems, VLSI and electronics. The quickest way to reach me is email.</p>
+  <div class="cta" style="justify-content:center">
+    <a class="btn pri" href="mailto:sanjaytalasu06@gmail.com">sanjaytalasu06@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/sanjaytalasu/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</div></section>
+<footer>© 2026 Talasu Sanjay · Vellore, Tamil Nadu</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  try{var t=localStorage.getItem('theme');if(t)root.setAttribute('data-theme',t)}catch(e){}
+  document.getElementById('theme').addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');
+    var next=cur==='dark'?'light':'dark';root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next)}catch(e){}
+  });
+  var bar=document.getElementById('bar');
+  addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  var words=['VLSI & ASIC design','Embedded systems','Analog & signal conditioning','IoT & TinyML'],wi=0,ci=0,del=false,el=document.getElementById('typed');
+  function tick(){
+    var w=words[wi];ci+=del?-1:1;el.textContent=w.slice(0,ci);
+    var d=del?35:75;
+    if(!del&&ci===w.length){del=true;d=1400}else if(del&&ci===0){del=false;wi=(wi+1)%words.length;d=300}
+    setTimeout(tick,d);
+  }
+  tick();
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('i[data-w]').forEach(function(i){i.style.width=i.dataset.w+'%'});io.unobserve(e.target)}})},{threshold:.3});
+  io.observe(document.getElementById('bars'));
+})();
+</script>
+</body>
+</html>
